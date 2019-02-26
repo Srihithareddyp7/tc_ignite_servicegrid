@@ -12,7 +12,7 @@ RUN    unzip -q apache-ignite-2.7.0-bin.zip
 RUN     mv apache-ignite-2.7.0-bin IGNITE-2_7
 RUN chmod +x $IGNITE_HOME/bin/ignite.sh
 
-COPY target  $IGNITE_HOME/A-Ignite/
+COPY A-Igite/target  $IGNITE_HOME/A-Ignite/
 WORKDIR $IGNITE_HOME/A-Ignite/target
 
 EXPOSE 11211 47100 47500 49112
