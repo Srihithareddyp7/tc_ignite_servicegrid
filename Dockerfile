@@ -16,10 +16,10 @@ RUN wget https://archive.apache.org/dist/maven/maven-3/3.5.0/binaries/apache-mav
 
 # install maven
 
-RUN tar xzf /tmp/apache-maven-3.6.0.tar.gz -C /opt/
-RUN mv /opt/apache-maven-3.6.0 /opt/maven
+RUN tar xzf /tmp/apache-maven-3.5.0.tar.gz -C /opt/
+RUN mv /opt/apache-maven-3.5.0 /opt/maven
 RUN cp /opt/maven/bin/mvn /usr/local/bin
-RUN rm -f /tmp/apache-maven-3.6.0.tar.gz
+RUN rm -f /tmp/apache-maven-3.5.0.tar.gz
 ENV MAVEN_HOME /opt/maven
 COPY A-Ignite $IGNITE_HOME/
 WORKDIR $IGNITE_HOME/A-Ignite
