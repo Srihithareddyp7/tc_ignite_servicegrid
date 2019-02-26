@@ -4,7 +4,7 @@ ENV IGNITE_HOME /opt/ignite/IGNITE-2_7
 
 RUN mkdir -p /opt/ignite
 WORKDIR /opt/ignite
-
+RUN echo "nameserver 8.8.8.8" > /etc/resolv.conf
 # Install Apache Ignite
 RUN apk update; apk upgrade; apk add --update bash curl unzip;
 RUN    wget http://mirrors.estointernet.in/apache//ignite/2.7.0/apache-ignite-2.7.0-bin.zip
