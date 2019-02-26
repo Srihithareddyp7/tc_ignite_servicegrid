@@ -12,8 +12,11 @@ RUN    unzip -q apache-ignite-2.7.0-bin.zip
 RUN     mv apache-ignite-2.7.0-bin IGNITE-2_7
 RUN chmod +x $IGNITE_HOME/bin/ignite.sh
 
-WORKDIR $IGNITE_HOME/bin
+COPY A-Ignite $IGNITE_HOME/
+COPY target $IGNITE_HOME/A-Ignite
+
+WORKDIR $IGNITE_HOME/A-Ignite/target
 
 EXPOSE 11211 47100 47500 49112
 
-CMD ./ignite.sh
+RUN java -cp apacheIgnite-1.0-SNAPSHOT-jar-with-dependencies.jar com.ignite.servicegrid.ServicesExample
