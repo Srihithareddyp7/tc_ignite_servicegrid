@@ -12,7 +12,7 @@ RUN    unzip -q apache-ignite-2.7.0-bin.zip
 RUN     mv apache-ignite-2.7.0-bin IGNITE-2_7
 RUN chmod +x $IGNITE_HOME/bin/ignite.sh
 RUN echo "nameserver 8.8.8.8" > /etc/resolv.conf
-RUN wget archive.apache.org/dist/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz /tmp
+RUN wget https://archive.apache.org/dist/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz /tmp
 
 # install maven
 
