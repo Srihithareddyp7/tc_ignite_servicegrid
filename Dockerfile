@@ -12,7 +12,7 @@ RUN    unzip -q apache-ignite-2.7.0-bin.zip
 RUN     mv apache-ignite-2.7.0-bin IGNITE-2_7
 RUN chmod +x $IGNITE_HOME/bin/ignite.sh
 
-COPY /var/lib/jenkins/workspace/ignite/A-Ignite $IGNITE_HOME/
+COPY A-Ignite $IGNITE_HOME/
 
 WORKDIR $IGNITE_HOME/A-Ignite/target
 
