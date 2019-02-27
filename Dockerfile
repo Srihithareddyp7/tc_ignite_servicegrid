@@ -1,9 +1,9 @@
 FROM openjdk:8u121-jre-alpine
 
-ENV IGNITE_HOME /opt/ignite/IGNITE-2_7
+ENV IGNITE_HOME /opt/IGNITE-2_7
 
 RUN mkdir -p /opt/ignite
-WORKDIR /opt/ignite
+WORKDIR /opt/
 
 # Install Apache Ignite
 RUN  apk update; apk upgrade; apk add --update bash curl unzip;
