@@ -50,7 +50,7 @@ public class ServicesExample {
         // Mark this node as client node.
         Ignition.setClientMode(true);
 
-        try (Ignite ignite = Ignition.start("/opt/ignite/IGNITE-2_7/A-Ignite/config/example-ignite.xml")) {
+        try (Ignite ignite = Ignition.start("/opt/IGNITE-2_7/A-Ignite/config/example-ignite.xml")) {
             if (!ExamplesUtils.hasServerNodes(ignite))
                 return;
             //Ignite.active(true);
