@@ -18,4 +18,4 @@ COPY A-Ignite/* /opt/IGNITE-2_7/A-Ignite/
 WORKDIR $IGNITE_HOME
 
 EXPOSE 11211 47100 47500 49112
-#RUN java -cp apacheIgnite-1.0-SNAPSHOT-jar-with-dependencies.jar com.ignite.servicegrid.ServicesExample
+RUN java -cp apacheIgnite-1.0-SNAPSHOT-jar-with-dependencies.jar com.ignite.servicegrid.ServicesExample
