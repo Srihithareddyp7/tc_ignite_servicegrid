@@ -12,8 +12,8 @@ RUN    unzip -q apache-ignite-2.7.0-bin.zip
 RUN     mv apache-ignite-2.7.0-bin IGNITE-2_7
 RUN chmod +x $IGNITE_HOME/bin/ignite.sh
 
-RUN mkdir -p /opt/IGNITE-2_7/A-Ignite
-COPY A-Ignite/* /opt/IGNITE-2_7/A-Ignite/
+#RUN mkdir -p /opt/IGNITE-2_7
+COPY A-Ignite /opt/IGNITE-2_7/
 
 WORKDIR $IGNITE_HOME
 
