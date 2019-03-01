@@ -11,7 +11,7 @@ RUN    wget  http://archive.apache.org/dist/ignite/2.6.0/apache-ignite-fabric-2.
 RUN    unzip -q apache-ignite-fabric-2.6.0-bin.zip
 RUN     mv apache-ignite-fabric-2.6.0-bin IGNITE-2_6
 RUN    chmod +x $IGNITE_HOME/bin/ignite.sh
-RUN     $IGNITE_HOME/bin/ignite.sh 
+RUN     $IGNITE_HOME/bin/ignite.sh /$IGNITE_HOME/examples/config/example-ignite.xml
 RUN mkdir -p /opt/IGNITE-2_6/A-Ignite
 ADD A-Ignite /opt/IGNITE-2_6/A-Ignite
 
