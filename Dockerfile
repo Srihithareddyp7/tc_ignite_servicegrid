@@ -15,7 +15,7 @@ RUN mkdir -p /opt/IGNITE-2_6/A-Ignite
 ADD A-Ignite /opt/IGNITE-2_6/A-Ignite
 
 WORKDIR /opt/IGNITE-2_6/bin
-RUN ./ignite.sh /opt/IGNITE-2_6/A-Ignite/config/example-ignite.xml
+CMD ./ignite.sh /opt/IGNITE-2_6/A-Ignite/config/example-ignite.xml
 
 WORKDIR /opt/IGNITE-2_6/A-Ignite/target
 
