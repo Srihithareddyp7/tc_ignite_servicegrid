@@ -8,10 +8,9 @@ ENV IGNITE_VERSION 2.6.0
 ENV IGNITE_HOME /opt/ignite/apache-ignite-fabric-${IGNITE_VERSION}-bin
 
 # Do not rely on anything provided by base image(s), but be explicit, if they are installed already it is noop then
-RUN yum update && yum install -y --no-install-recommends \
+RUN apk update && apk install -y --no-install-recommends \
         unzip \
         curl \
-    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt/ignite
 
