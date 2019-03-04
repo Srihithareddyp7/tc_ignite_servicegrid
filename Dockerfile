@@ -16,7 +16,7 @@ ADD A-Ignite /opt/IGNITE-2_6/A-Ignite
 
 #WORKDIR /opt/IGNITE-2_6/bin/
 WORKDIR /opt/IGNITE-2_6/A-Ignite/target/
-RUN nohup /opt/IGNITE-2_6/bin/ignite.sh /opt/IGNITE-2_6/A-Ignite/config/example-ignite.xml >/dev/null &
+CMD nohup /opt/IGNITE-2_6/bin/ignite.sh /opt/IGNITE-2_6/A-Ignite/config/example-ignite.xml >/dev/null &
 CMD java -cp apacheIgnite-1.0-SNAPSHOT-jar-with-dependencies.jar com.ignite.servicegrid.ServicesExample
 
 EXPOSE 11211 47100 47500 47501 47502 47503 47504 47505 47506 47507 47508 47509 49112
