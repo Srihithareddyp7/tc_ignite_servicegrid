@@ -13,8 +13,8 @@ RUN  apk update && apk upgrade && apk add --update bash curl unzip;
 WORKDIR /opt/ignite
 
 RUN wget  http://archive.apache.org/dist/ignite/2.6.0/apache-ignite-fabric-2.6.0-bin.zip
-    && unzip -q apache-ignite-fabric-2.6.0-bin.zip
-    && rm apache-ignite-fabric-2.6.0-bin.zip
+RUN unzip -q apache-ignite-fabric-2.6.0-bin.zip
+RUN rm apache-ignite-fabric-2.6.0-bin.zip
 
 # Copy sh files and set permission
 COPY ./run.sh $IGNITE_HOME/
