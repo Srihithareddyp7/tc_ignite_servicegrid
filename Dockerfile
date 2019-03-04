@@ -7,16 +7,16 @@ ENV IGNITE_VERSION 2.6.0
 # Ignite home
 ENV IGNITE_HOME /opt/ignite/apache-ignite-fabric-${IGNITE_VERSION}-bin
 
-# Do not rely on anything provided by base image(s), but be explicit, if they are installed already it is noop then
-RUN apk update && apk install -y --no-install-recommends \
-        unzip \
-        curl \
+# Install Apache Ignite
+RUN  apk update && apk upgrade && apk add --update bash curl unzip;
+RUN    wget  http://archive.apache.org/dist/ignite/2.6.0/apache-ignite-fabric-2.6.0-bin.zip
+RUN    unzip -q apache-ignite-fabric-2.6.0-bin.zip
 
 WORKDIR /opt/ignite
 
-RUN curl  http://archive.apache.org/dist/ignite/2.6.0/apache-ignite-fabric-2.6.0-bin.zip
+RUN wget  http://archive.apache.org/dist/ignite/2.6.0/apache-ignite-fabric-2.6.0-bin.zip
 RUN unzip -q apache-ignite-fabric-2.6.0-bin.zip
-RUN rm apache-ignite-fabric-2.6.0-bin.zip
+
 
 # Copy sh files and set permission
 COPY ./run.sh $IGNITE_HOME/
