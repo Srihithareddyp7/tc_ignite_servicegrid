@@ -15,11 +15,11 @@ RUN chmod +x $IGNITE_HOME/bin/ignite.sh
 RUN mkdir -p /opt/IGNITE-2_6/A-Ignite
 ADD A-Ignite /opt/IGNITE-2_6/A-Ignite
 
-COPY ignite_java.sh /opt/ignite_java.sh
-RUN chmod +x /opt/ignite_java.sh
+#COPY ignite_java.sh /opt/ignite_java.sh
+#RUN chmod +x /opt/ignite_java.sh
 
 WORKDIR /opt/IGNITE-2_6/A-Ignite/target/
-#CMD nohup /opt/IGNITE-2_6/bin/ignite.sh /opt/IGNITE-2_6/A-Ignite/config/example-ignite.xml >/dev/null &
-#CMD java -cp apacheIgnite-1.0-SNAPSHOT-jar-with-dependencies.jar com.ignite.servicegrid.ServicesExample
-CMD sh /opt/ignite_java.sh
+CMD /opt/IGNITE-2_6/bin/ignite.sh /opt/IGNITE-2_6/A-Ignite/config/example-ignite.xml >/dev/null &
+RUN java -cp apacheIgnite-1.0-SNAPSHOT-jar-with-dependencies.jar com.ignite.servicegrid.ServicesExample
+#CMD sh /opt/ignite_java.sh
 EXPOSE 11211 47100 47500 47501 47502 47503 47504 47505 47506 47507 47508 47509 49112
