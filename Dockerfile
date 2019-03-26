@@ -21,6 +21,6 @@ ADD A-Ignite /opt/IGNITE-2_6/A-Ignite
 
 CMD /opt/IGNITE-2_6/bin/ignite.sh /opt/IGNITE-2_6/A-Ignite/config/example-ignite.xml
 WORKDIR /opt/IGNITE-2_6/A-Ignite/target/
-RUN java -cp apacheIgnite-1.0-SNAPSHOT-jar-with-dependencies.jar com.ignite.servicegrid.ServicesExample
-#CMD sh /opt/ignite_java.sh
+#RUN java -cp apacheIgnite-1.0-SNAPSHOT-jar-with-dependencies.jar com.ignite.servicegrid.ServicesExample
+CMD sh /opt/ignite_java.sh
 EXPOSE 11211 47100 47500 49112
