@@ -19,7 +19,7 @@ COPY ignite_java.sh /opt/ignite_java.sh
 RUN chmod +x /opt/ignite_java.sh
 
 
-CMD /opt/IGNITE-2_6/bin/ignite.sh /opt/IGNITE-2_6/A-Ignite/config/example-ignite.xml
+CMD /opt/IGNITE-2_6/bin/ignite.sh 
 WORKDIR /opt/IGNITE-2_6/A-Ignite/target/
 RUN java -cp apacheIgnite-1.0-SNAPSHOT-jar-with-dependencies.jar com.ignite.servicegrid.ServicesExample
 #CMD sh /opt/ignite_java.sh
