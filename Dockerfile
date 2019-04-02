@@ -15,8 +15,8 @@ RUN chmod +x $IGNITE_HOME/bin/ignite.sh
 RUN mkdir -p /opt/IGNITE-2_6/A-Ignite
 ADD A-Ignite /opt/IGNITE-2_6/A-Ignite
 
-COPY ignite_java.sh /opt/ignite_java.sh
-RUN chmod +x /opt/ignite_java.sh
+COPY ignite_java.sh /opt/IGNITE-2_6/A-Ignite/target/ignite_java.sh
+RUN chmod +x /opt/IGNITE-2_6/A-Ignite/target/ignite_java.sh
 
 
 CMD /opt/IGNITE-2_6/bin/ignite.sh /opt/IGNITE-2_6/A-Ignite/config/example-ignite.xml
