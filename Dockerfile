@@ -16,7 +16,6 @@ RUN mkdir -p /opt/IGNITE-2_6/A-Ignite
 ADD A-Ignite /opt/IGNITE-2_6/A-Ignite
 
 COPY ignite_java.sh /opt/IGNITE-2_6/A-Ignite/target/ignite_java.sh
-COPY data.txt /opt/IGNITE-2_6/A-Ignite/target/data.txt
 RUN chmod +x /opt/IGNITE-2_6/A-Ignite/target/ignite_java.sh
 
 
